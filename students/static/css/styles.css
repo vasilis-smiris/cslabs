@@ -10437,6 +10437,14 @@ footer a:hover .cpath{
   height: 200px;
 }
 
+.announcement-hr{
+    width:65%;
+    padding:0;
+    margin:0;
+    background-image: linear-gradient(to right,#ccc, #87879c);
+    height: 0.2px;
+}
+
 .announcement-container a {
   color:var(--stud-letter);
   transition:color .15s;
