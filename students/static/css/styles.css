@@ -10420,6 +10420,13 @@ footer a:hover .cpath{
 
 .announcement:hover{
   background:#cc5555;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  transform: translateZ(0px);
+  transition-duration: 0.3s;
+  transition-property: box-shadow;
+  vertical-align: middle;
 }
 
 .announcement-main {
