@@ -42,6 +42,10 @@
   --stud-gray:#ccc; /*light background*/
   /*--stud-letter:#969696;*/ /*grammata gia dark background*/
   --stud-letter:#1f1f1f; /*grammata gia light background*/
+  --ann-c:#999;
+  --ann-c-h:#878787;
+  --ann-txt:#fff;
+  /*#3d3536*/
   /*M end*/
 }
 
@@ -10108,7 +10112,7 @@ body {
 ------------------------- */
 
 hr{
-	border-color:rgba(150,150,150,.25);
+  border-color:rgba(150,150,150,.25);
 }
 
 .featurette-divider {
@@ -10410,21 +10414,23 @@ footer a:hover .cpath{
 
 .announcement {
   position:relative;
-  background:var(--stud-red);
+  /*background:var(--stud-red);*/
+  background:var(--ann-c);
   width:100%;
   transition:background .15s;
   cursor:pointer;
   border-radius:5px;
   overflow:hidden;
+  color:var(--ann-txt);
 }
 
 .announcement:hover{
-  background:#cc5555;
+  /*background:#cc5555;*/
+  background:var(--ann-c-h);
   backface-visibility: hidden;
-  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
   display: inline-block;
-  transform: translateZ(0px);
-  transition-duration: 0.3s;
+  transition-duration: 0.15s;
   transition-property: box-shadow;
   vertical-align: middle;
 }
@@ -10435,14 +10441,6 @@ footer a:hover .cpath{
 
 .announcement-secondary {
   height: 200px;
-}
-
-.announcement-hr{
-    width:65%;
-    padding:0;
-    margin:0;
-    background-image: linear-gradient(to right,#ccc, #87879c);
-    height: 0.2px;
 }
 
 .announcement-container a {
@@ -10456,24 +10454,19 @@ footer a:hover .cpath{
 }
 
 .announcement-title{
- /* position:absolute;
-  left:10px;*/
   font-size:1.75rem;
-  color:white;
   padding-left:0.625rem;
   padding-right:0.625rem;
+  transition:color .15s;
 }
 
 .announcement-body{
-  color:white;
-  /*position:absolute;
-  top:45px;
-  left:10px;*/
   padding-left:0.625rem;
   width:90%;
   height:40%;
   overflow:hidden;
   text-overflow:ellipsis;
+  transition:color .15s;
 }
 
 .announcement-body-main{
@@ -10559,48 +10552,48 @@ footer a:hover .cpath{
 
 /*wikipage*/
 .type-nav > .nav-link{
-	color:var(--stud-letter);
-	transition:color .15s;
+  color:var(--stud-letter);
+  transition:color .15s;
 }
 
 .type-nav > .nav-link:hover{
-	color:var(--stud-red);
+  color:var(--stud-red);
 }
 
 .type-nav > .nav-item.active{
-	color:#fff;
-	background-color:var(--stud-red);
+  color:#fff;
+  background-color:var(--stud-red);
 }
 
 .semester-nav a{
-	color:var(--stud-letter);
-	transition:color .15s;
+  color:var(--stud-letter);
+  transition:color .15s;
 }
 
 .semester-nav a:hover{
-	color:var(--stud-red);
+  color:var(--stud-red);
 }
 
 .semester-nav a.active{
-	color:white;
-	font-weight:bold;
-	background-color:var(--stud-red);
-	border-radius:5px;
+  color:white;
+  font-weight:bold;
+  background-color:var(--stud-red);
+  border-radius:5px;
 }
 
 .tab-pane .card{
-	background-color:var(--stud-red);
-	color:white;
-	transition:background-color .15s;
+  background-color:var(--stud-red);
+  color:white;
+  transition:background-color .15s;
 }
 
 .tab-pane .card:hover{
-	background-color:#cc5555;
-	text-decoration:none;
+  background-color:#cc5555;
+  text-decoration:none;
 }
 
 .tab-pane .card small{
-	color:#bbb;
+  color:#bbb;
 }
 /*wikipage end*/
 
@@ -10649,21 +10642,21 @@ footer a:hover .cpath{
 }
 
 .course-card{
-	border-color:var(--stud-red);
-	width:80%;
-	margin-left:auto;
-	margin-right:auto;
+  border-color:var(--stud-red);
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .course-card-header{
-	color:white;
-	background-color:var(--stud-red);
-	font-weight:bold;
-	font-size:2rem;
+  color:white;
+  background-color:var(--stud-red);
+  font-weight:bold;
+  font-size:2rem;
 }
 
 .course-card-header small{
-	font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 @media screen and (max-width:768px){
@@ -10679,39 +10672,39 @@ footer a:hover .cpath{
   }
   
   .course-card-header small{
-	display:block;
+  display:block;
   }
   
   #edit-btn{
-	position: absolute;
-	right: 1rem;
-	top: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
   }
   
   #edit-back{
-	position:absolute;
-	top: 1rem;
-	right: 5rem;
+  position:absolute;
+  top: 1rem;
+  right: 5rem;
   }
 }
 
 
 .course-card-body{
-	background-color:var(--stud-gray);
+  background-color:var(--stud-gray);
 }
 
 .course-card-list .list-group-item{
-	background-color:var(--stud-gray);
+  background-color:var(--stud-gray);
 }
 
 .course-card-body a, .mobile-course .container a{
-	color:var(--stud-red);
-	transition:color .15s;
+  color:var(--stud-red);
+  transition:color .15s;
 }
 
 .course-card-body a:hover, .mobile-course .container a:hover{
-	color:#cc5555;
-	text-decoration:none;
+  color:#cc5555;
+  text-decoration:none;
 }
 /*course page finnish*/
 
@@ -10819,7 +10812,7 @@ main{
 
 .widget-btn:hover{
   cursor:pointer;
-  background-color:#cc5555;
+  background-color:#821025;
 }
 
 .widget-btn svg{
