@@ -22,7 +22,6 @@ $(".course-card").on("click", ".delete-button", function () {
 	} else {
 		listItem.hide();
 	}
-	//$(this).parent().parent().parent().remove();
 });
 
 $(".course-card").on("click", ".add-button", function () {
@@ -102,6 +101,9 @@ $(".widget").on("click", ".go-dark", function(){
 	$("html").css("--stud-gray", "#1f1f1f");
 	$("html").css("--stud-letter", "#666");
 	$("html").css("--stud-red", "#a21025");
+	$("html").css("--ann-c", "#333");
+	$("html").css("--ann-c-h", "#555");
+	$("html").css("--ann-txt", "#aaa");
 	$(this).removeClass("go-dark");
 	$(this).addClass("go-light");
 });
@@ -110,6 +112,9 @@ $(".widget").on("click", ".go-light", function(){
 	$("html").css("--stud-gray", "#ccc");
 	$("html").css("--stud-letter", "#1f1f1f");
 	$("html").css("--stud-red");
+	$("html").css("--ann-c", "#999");
+	$("html").css("--ann-c-h", "#878787");
+	$("html").css("--ann-txt", "#fff");
 	$(this).removeClass("go-light");
 	$(this).addClass("go-dark");
 });
