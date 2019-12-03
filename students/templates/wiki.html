@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CS Labs</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+	<link href="../static/css/styles.css" rel="stylesheet" />
+	<link href="../favicon.png" rel="icon" type="image/png" />
+	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<!--navigation bar-->
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-students">
+			<a class="navbar-brand" href="index.html"><img src="../static/images/icon.png" height="50" /><span
+					class="mx-2" style="font-family:'Orbitron', sans-serif;">cslabs</span></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+				aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="wiki.html">Wiki</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="http://mailsrv.cslab.unipi.local" target="_blank">Webmail</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="http://10.1.1.8/" target="_blank">Cloud</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="http://labtutor.cs.unipi.gr/" target="_blank">Labtutor</a>
+					</li>
+				</ul>
+				<button class="btn btn-outline-students my-2 my-sm-0 mt-2 mt-md-0" data-toggle="modal"
+					data-target="#login-modal"><svg class="mr-1" xmlns="http://www.w3.org/2000/svg" width="20"
+						height="20" viewBox="0 0 24 24">
+						<path d="M0 0h24v24H0z" fill="none" />
+						<path class="cpath"
+							d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z" />
+					</svg></span>Σύνδεση</button>
+			</div>
+		</nav>
+		<!--end of navigation bar-->
+	</header>
+
+	<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content loginmodal-container">
+				<h1><svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
+						<path d="M0 0h24v24H0z" fill="none" />
+						<path style="fill:#666"
+							d="M21 3.01H3c-1.1 0-2 .9-2 2V9h2V4.99h18v14.03H3V15H1v4.01c0 1.1.9 1.98 2 1.98h18c1.1 0 2-.88 2-1.98v-14c0-1.11-.9-2-2-2zM11 16l4-4-4-4v3H1v2h10v3z" />
+					</svg> Σύνδεση</h1><br>
+				<form>
+					<input type="text" name="user" placeholder="Όνομα χρήστη">
+					<input type="password" name="pass" placeholder="Κωδικός">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Σύνδεση">
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<main role="main" style="padding-bottom:5rem;padding-top:5rem;">
+		<!--==============================================courses==================================================================-->
+		<div class="container">
+			<nav>
+				<div class="nav nav-tabs type-nav" id="nav-tab" role="tablist">
+					<a class="nav-item nav-link active" id="type-gen-tab" data-toggle="tab" href="#type-gen" role="tab"
+						aria-controls="type-gen" aria-selected="true">Μαθήματα Κορμού</a>
+					<a class="nav-item nav-link" id="type-br-tab" data-toggle="tab" href="#type-br" role="tab"
+						aria-controls="type-br" aria-selected="false">Μαθήματα Κατεύθυνσης</a>
+					<a class="nav-item nav-link" id="type-opt-tab" data-toggle="tab" href="#type-opt" role="tab"
+						aria-controls="type-opt" aria-selected="false">Μαθήματα Επιλογής</a>
+				</div>
+			</nav>
+			<div class="tab-content" id="nav-tabContent">
+				<div class="tab-pane fade show active" id="type-gen" role="tabpanel" aria-labelledby="type-gen-tab">
+					<nav class="nav justify-content-center semester-nav mt-3 mb-4">
+						<a class="nav-item nav-link active" id="gen-ex1-tab" data-toggle="tab" href="#gen-ex1"
+							role="tab" aria-controls="gen-ex1" aria-selected="true">Εξάμηνο 1ο</a>
+						<a class="nav-item nav-link" id="gen-ex2-tab" data-toggle="tab" href="#gen-ex2" role="tab"
+							aria-controls="gen-ex2" aria-selected="false">Εξάμηνο 2ο</a>
+						<a class="nav-item nav-link" id="gen-ex3-tab" data-toggle="tab" href="#gen-ex3" role="tab"
+							aria-controls="gen-ex3" aria-selected="false">Εξάμηνο 3ο</a>
+						<a class="nav-item nav-link" id="gen-ex4-tab" data-toggle="tab" href="#gen-ex4" role="tab"
+							aria-controls="gen-ex4" aria-selected="false">Εξάμηνο 4ο</a>
+						<a class="nav-item nav-link" id="gen-ex5-tab" data-toggle="tab" href="#gen-ex5" role="tab"
+							aria-controls="gen-ex5" aria-selected="false">Εξάμηνο 5ο</a>
+						<a class="nav-item nav-link" id="gen-ex6-tab" data-toggle="tab" href="#gen-ex6" role="tab"
+							aria-controls="gen-ex6" aria-selected="false">Εξάμηνο 6ο</a>
+					</nav>
+					<div class="tab-content" id="course-gen-tabContent">
+						<div class="tab-pane fade show active" id="gen-ex1" role="tabpanel"
+							aria-labelledby="gen-ex1-tab">
+							<div class="card-deck row px-3 px-md-0">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+							<div class="card-deck row px-3 px-md-0 mt-lg-3">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="tab-pane fade show" id="gen-ex2" role="tabpanel" aria-labelledby="gen-ex2-tab">
+							<div class="card-deck row px-3 px-md-0">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+							<div class="card-deck row px-3 px-md-0 mt-lg-3">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="tab-pane fade show" id="gen-ex3" role="tabpanel" aria-labelledby="gen-ex3-tab">
+							<div class="card-deck row px-3 px-md-0">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+							<div class="card-deck row px-3 px-md-0 mt-lg-3">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="tab-pane fade show" id="gen-ex4" role="tabpanel" aria-labelledby="gen-ex4-tab">
+							<div class="card-deck row px-3 px-md-0">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+							<div class="card-deck row px-3 px-md-0 mt-lg-3">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="tab-pane fade show" id="gen-ex5" role="tabpanel" aria-labelledby="gen-ex5-tab">
+							<div class="card-deck row px-3 px-md-0">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+							<div class="card-deck row px-3 px-md-0 mt-lg-3">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="tab-pane fade show" id="gen-ex6" role="tabpanel" aria-labelledby="gen-ex6-tab">
+							<div class="card-deck row px-3 px-md-0">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+							<div class="card-deck row px-3 px-md-0 mt-lg-3">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="type-br" role="tabpanel" aria-labelledby="type-br-tab">
+					<nav class="nav justify-content-center semester-nav mt-3 mb-4">
+						<a class="nav-item nav-link active" id="br-dys-tab" data-toggle="tab" href="#br-dys" role="tab"
+							aria-controls="br-dys" aria-selected="true">ΔΥΣ</a>
+						<a class="nav-item nav-link" id="br-psy-tab" data-toggle="tab" href="#br-psy" role="tab"
+							aria-controls="br-psy" aria-selected="false">ΠΣΥ</a>
+						<a class="nav-item nav-link" id="br-tles-tab" data-toggle="tab" href="#br-tles" role="tab"
+							aria-controls="br-tles" aria-selected="false">ΤΛΕΣ</a>
+					</nav>
+					<hr>
+					<div class="tab-content" id="br-tabContent">
+						<div class="tab-pane fade show active" id="br-dys" role="tabpanel" aria-labelledby="br-dys-tab">
+							<nav class="nav justify-content-center semester-nav mt-3 mb-4">
+								<a class="nav-item nav-link active" id="br-dys-ex5-tab" data-toggle="tab" href="#br-dys-ex5" role="tab"
+									aria-controls="br-dys-ex5" aria-selected="true">Εξάμηνο 5ο</a>
+								<a class="nav-item nav-link" id="br-dys-ex6-tab" data-toggle="tab" href="#br-dys-ex6" role="tab"
+									aria-controls="br-dys-ex6" aria-selected="false">Εξάμηνο 6ο</a>
+								<a class="nav-item nav-link" id="br-dys-ex7-tab" data-toggle="tab" href="#br-dys-ex7" role="tab"
+									aria-controls="br-dys-ex7" aria-selected="false">Εξάμηνο 7ο</a>
+								<a class="nav-item nav-link" id="br-dys-ex8-tab" data-toggle="tab" href="#br-dys-ex8" role="tab"
+									aria-controls="br-dys-ex8" aria-selected="false">Εξάμηνο 8ο</a>
+							</nav>
+							<div class="tab-content" id="dys-tabContent">
+								<div class="tab-pane fade show active" id="br-dys-ex5" role="tabpanel" aria-labelledby="br-dys-ex5-tab">
+									<div class="card-deck row px-3 px-md-0">
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a longer card with supporting text below as a
+													natural lead-in to additional content. This content is a little bit longer.
+												</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This card has supporting text below as a natural lead-in to
+													additional content.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a wider card with supporting text below as a
+													natural lead-in to additional content. This card has even longer content
+													than the first to show that equal height action.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="tab-pane fade show" id="br-dys-ex6" role="tabpanel" aria-labelledby="br-dys-ex6-tab">
+									<div class="card-deck row px-3 px-md-0">
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a longer card with supporting text below as a
+													natural lead-in to additional content. This content is a little bit longer.
+												</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This card has supporting text below as a natural lead-in to
+													additional content.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a wider card with supporting text below as a
+													natural lead-in to additional content. This card has even longer content
+													than the first to show that equal height action.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="tab-pane fade show" id="br-dys-ex7" role="tabpanel" aria-labelledby="br-dys-ex7-tab">
+									<div class="card-deck row px-3 px-md-0">
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a longer card with supporting text below as a
+													natural lead-in to additional content. This content is a little bit longer.
+												</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This card has supporting text below as a natural lead-in to
+													additional content.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a wider card with supporting text below as a
+													natural lead-in to additional content. This card has even longer content
+													than the first to show that equal height action.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="tab-pane fade show" id="br-dys-ex8" role="tabpanel" aria-labelledby="br-dys-ex8-tab">
+									<div class="card-deck row px-3 px-md-0">
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a longer card with supporting text below as a
+													natural lead-in to additional content. This content is a little bit longer.
+												</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This card has supporting text below as a natural lead-in to
+													additional content.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a wider card with supporting text below as a
+													natural lead-in to additional content. This card has even longer content
+													than the first to show that equal height action.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade show" id="br-psy" role="tabpanel" aria-labelledby="br-psy-tab">
+							<nav class="nav justify-content-center semester-nav mt-3 mb-4">
+								<a class="nav-item nav-link active" id="br-psy-ex5-tab" data-toggle="tab" href="#br-psy-ex5" role="tab"
+									aria-controls="br-psy-ex5" aria-selected="true">Εξάμηνο 5ο</a>
+								<a class="nav-item nav-link" id="br-psy-ex6-tab" data-toggle="tab" href="#br-psy-ex6" role="tab"
+									aria-controls="br-psy-ex6" aria-selected="false">Εξάμηνο 6ο</a>
+								<a class="nav-item nav-link" id="br-psy-ex7-tab" data-toggle="tab" href="#br-psy-ex7" role="tab"
+									aria-controls="br-psy-ex7" aria-selected="false">Εξάμηνο 7ο</a>
+								<a class="nav-item nav-link" id="br-psy-ex8-tab" data-toggle="tab" href="#br-psy-ex8" role="tab"
+									aria-controls="br-psy-ex8" aria-selected="false">Εξάμηνο 8ο</a>
+							</nav>
+							<div class="tab-content" id="psy-tabContent">
+								<div class="tab-pane fade show active" id="br-psy-ex5" role="tabpanel" aria-labelledby="br-psy-ex5-tab">
+									<div class="card-deck row px-3 px-md-0">
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a longer card with supporting text below as a
+													natural lead-in to additional content. This content is a little bit longer.
+												</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This card has supporting text below as a natural lead-in to
+													additional content.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a wider card with supporting text below as a
+													natural lead-in to additional content. This card has even longer content
+													than the first to show that equal height action.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="tab-pane fade show" id="br-psy-ex6" role="tabpanel" aria-labelledby="br-psy-ex6-tab">
+									<div class="card-deck row px-3 px-md-0">
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a longer card with supporting text below as a
+													natural lead-in to additional content. This content is a little bit longer.
+												</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This card has supporting text below as a natural lead-in to
+													additional content.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a wider card with supporting text below as a
+													natural lead-in to additional content. This card has even longer content
+													than the first to show that equal height action.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="tab-pane fade show" id="br-psy-ex7" role="tabpanel" aria-labelledby="br-psy-ex7-tab">
+									<div class="card-deck row px-3 px-md-0">
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a longer card with supporting text below as a
+													natural lead-in to additional content. This content is a little bit longer.
+												</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This card has supporting text below as a natural lead-in to
+													additional content.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a wider card with supporting text below as a
+													natural lead-in to additional content. This card has even longer content
+													than the first to show that equal height action.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="tab-pane fade show" id="br-psy-ex8" role="tabpanel" aria-labelledby="br-psy-ex8-tab">
+									<div class="card-deck row px-3 px-md-0">
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a longer card with supporting text below as a
+													natural lead-in to additional content. This content is a little bit longer.
+												</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This card has supporting text below as a natural lead-in to
+													additional content.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a wider card with supporting text below as a
+													natural lead-in to additional content. This card has even longer content
+													than the first to show that equal height action.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade show" id="br-tles" role="tabpanel" aria-labelledby="br-tles-tab">
+							<nav class="nav justify-content-center semester-nav mt-3 mb-4">
+								<a class="nav-item nav-link active" id="br-tles-ex5-tab" data-toggle="tab" href="#br-tles-ex5" role="tab"
+									aria-controls="br-tles-ex5" aria-selected="true">Εξάμηνο 5ο</a>
+								<a class="nav-item nav-link" id="br-tles-ex6-tab" data-toggle="tab" href="#br-tles-ex6" role="tab"
+									aria-controls="br-tles-ex6" aria-selected="false">Εξάμηνο 6ο</a>
+								<a class="nav-item nav-link" id="br-tles-ex7-tab" data-toggle="tab" href="#br-tles-ex7" role="tab"
+									aria-controls="br-tles-ex7" aria-selected="false">Εξάμηνο 7ο</a>
+								<a class="nav-item nav-link" id="br-tles-ex8-tab" data-toggle="tab" href="#br-tles-ex8" role="tab"
+									aria-controls="br-tles-ex8" aria-selected="false">Εξάμηνο 8ο</a>
+							</nav>
+							<div class="tab-content" id="tles-tabContent">
+								<div class="tab-pane fade show active" id="br-tles-ex5" role="tabpanel" aria-labelledby="br-tles-ex5-tab">
+									<div class="card-deck row px-3 px-md-0">
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a longer card with supporting text below as a
+													natural lead-in to additional content. This content is a little bit longer.
+												</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This card has supporting text below as a natural lead-in to
+													additional content.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a wider card with supporting text below as a
+													natural lead-in to additional content. This card has even longer content
+													than the first to show that equal height action.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="tab-pane fade show" id="br-tles-ex6" role="tabpanel" aria-labelledby="br-tles-ex6-tab">
+									<div class="card-deck row px-3 px-md-0">
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a longer card with supporting text below as a
+													natural lead-in to additional content. This content is a little bit longer.
+												</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This card has supporting text below as a natural lead-in to
+													additional content.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a wider card with supporting text below as a
+													natural lead-in to additional content. This card has even longer content
+													than the first to show that equal height action.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="tab-pane fade show" id="br-tles-ex7" role="tabpanel" aria-labelledby="br-tles-ex7-tab">
+									<div class="card-deck row px-3 px-md-0">
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a longer card with supporting text below as a
+													natural lead-in to additional content. This content is a little bit longer.
+												</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This card has supporting text below as a natural lead-in to
+													additional content.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a wider card with supporting text below as a
+													natural lead-in to additional content. This card has even longer content
+													than the first to show that equal height action.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="tab-pane fade show" id="br-tles-ex8" role="tabpanel" aria-labelledby="br-tles-ex8-tab">
+									<div class="card-deck row px-3 px-md-0">
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a longer card with supporting text below as a
+													natural lead-in to additional content. This content is a little bit longer.
+												</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This card has supporting text below as a natural lead-in to
+													additional content.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+										<a href="course.html" class="card col-12 col-lg-4">
+											<div class="card-body">
+												<h5 class="card-title">Course title</h5>
+												<p class="card-text">This is a wider card with supporting text below as a
+													natural lead-in to additional content. This card has even longer content
+													than the first to show that equal height action.</p>
+												<p class="card-text"><small>Last updated 3 mins ago</small></p>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="type-opt" role="tabpanel" aria-labelledby="type-opt-tab">
+					<nav class="nav justify-content-center semester-nav mt-3 mb-4">
+						<a class="nav-item nav-link active" id="opt-ex3-tab" data-toggle="tab" href="#opt-ex3"
+							role="tab" aria-controls="opt-ex3" aria-selected="true">Εξάμηνο 3ο</a>
+						<a class="nav-item nav-link" id="opt-ex4-tab" data-toggle="tab" href="#opt-ex4" role="tab"
+							aria-controls="opt-ex4" aria-selected="false">Εξάμηνο 4ο</a>
+						<a class="nav-item nav-link" id="opt-ex5-tab" data-toggle="tab" href="#opt-ex5" role="tab"
+							aria-controls="opt-ex5" aria-selected="false">Εξάμηνο 5ο</a>
+						<a class="nav-item nav-link" id="opt-ex6-tab" data-toggle="tab" href="#opt-ex6" role="tab"
+							aria-controls="opt-ex6" aria-selected="false">Εξάμηνο 6ο</a>
+						<a class="nav-item nav-link" id="opt-ex7-tab" data-toggle="tab" href="#opt-ex7" role="tab"
+							aria-controls="opt-ex7" aria-selected="false">Εξάμηνο 7ο</a>
+						<a class="nav-item nav-link" id="opt-ex8-tab" data-toggle="tab" href="#opt-ex8" role="tab"
+							aria-controls="opt-ex8" aria-selected="false">Εξάμηνο 8ο</a>
+					</nav>
+					<div class="tab-content" id="course-opt-tabContent">
+						<div class="tab-pane fade show active" id="opt-ex3" role="tabpanel"
+							aria-labelledby="opt-ex3-tab">
+							<div class="card-deck row px-3 px-md-0 mt-lg-3">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+							<div class="card-deck row px-3 px-md-0 mt-lg-3">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="tab-pane fade show" id="opt-ex4" role="tabpanel" aria-labelledby="opt-ex4-tab">
+							<div class="card-deck row px-3 px-md-0">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+							<div class="card-deck row px-3 px-md-0 mt-lg-3">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="tab-pane fade show" id="opt-ex5" role="tabpanel" aria-labelledby="opt-ex5-tab">
+							<div class="card-deck row px-3 px-md-0">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+							<div class="card-deck row px-3 px-md-0 mt-lg-3">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="tab-pane fade show" id="opt-ex6" role="tabpanel" aria-labelledby="opt-ex6-tab">
+							<div class="card-deck row px-3 px-md-0">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+							<div class="card-deck row px-3 px-md-0 mt-lg-3">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="tab-pane fade show" id="opt-ex7" role="tabpanel" aria-labelledby="opt-ex7-tab">
+							<div class="card-deck row px-3 px-md-0">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+							<div class="card-deck row px-3 px-md-0 mt-lg-3">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="tab-pane fade show" id="opt-ex8" role="tabpanel" aria-labelledby="opt-ex8-tab">
+							<div class="card-deck row px-3 px-md-0">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+							<div class="card-deck row px-3 px-md-0 mt-lg-3">
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a longer card with supporting text below as a
+											natural lead-in to additional content. This content is a little bit longer.
+										</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This card has supporting text below as a natural lead-in to
+											additional content.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+								<a href="course.html" class="card col-12 col-lg-4">
+									<div class="card-body">
+										<h5 class="card-title">Course title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a
+											natural lead-in to additional content. This card has even longer content
+											than the first to show that equal height action.</p>
+										<p class="card-text"><small>Last updated 3 mins ago</small></p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="text-modal" tabindex="-1" role="dialog" aria-labelledby="Text Modal"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title"></h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body text-modal-body">
+						<p></p>
+					</div>
+					<div class="modal-footer">
+						<small class="info-cont">Posted by <span class="info"></span></small>
+						<button type="button" class="btn btn-students" data-dismiss="modal">Κλείσιμο</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<hr class="featurette-divider">
+
+	<!-- FOOTER -->
+	<footer class="container">
+		<div class="row">
+			<div class="col-4">
+				<p>&copy; 2019 CS Labs &middot; <a href="#text-modal" data-toggle="modal">About Us</a></p>
+			</div>
+			<div class="col-4 text-center">
+				<a href="https://www.facebook.com/unipi.cslabs/" target="_blank" class="mr-2"><svg
+						xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512">
+						<path class="cpath"
+							d="M426.8 64H85.2C73.5 64 64 73.5 64 85.2v341.6c0 11.7 9.5 21.2 21.2 21.2H256V296h-45.9v-56H256v-41.4c0-49.6 34.4-76.6 78.7-76.6 21.2 0 44 1.6 49.3 2.3v51.8h-35.3c-24.1 0-28.7 11.4-28.7 28.2V240h57.4l-7.5 56H320v152h106.8c11.7 0 21.2-9.5 21.2-21.2V85.2c0-11.7-9.5-21.2-21.2-21.2z" />
+					</svg></a>
+				<a href="https://twitter.com/cslabs_unipi" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+						width="30" height="30" viewBox="0 0 512 512">
+						<path class="cpath"
+							d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8 0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z" />
+					</svg></a>
+			</div>
+			<div class="col-4">
+				<p class="text-right"><a href="#">Back to top</a></p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="../static/js/jquery-3.4.0.min.js"></script>
+	<script src="../static/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
