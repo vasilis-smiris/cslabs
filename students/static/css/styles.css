@@ -10858,17 +10858,6 @@ main{
   margin-bottom:.5rem;
 }
 
-.widget a{
-  display:block;
-  color:var(--stud-red);
-  transition:color .15s;
-}
-
-.widget a:hover{
-  text-decoration:none;
-  color:var(--stud-letter);
-}
-
 .widget-body-content{
   width:90%;
   margin-left: auto;
@@ -10876,7 +10865,18 @@ main{
   margin-top: 1rem;
 }
 
-.widget-body button{
+.widget-body-content a{
+  display:block;
+  color:var(--stud-red);
+  transition:color .15s;
+}
+
+.widget-body-content a:hover{
+  text-decoration:none;
+  color:#1f1f1f;
+}
+
+.widget-body-content button{
   height:3rem;
   width:3rem;
 }
