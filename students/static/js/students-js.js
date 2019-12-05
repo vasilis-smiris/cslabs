@@ -6,6 +6,7 @@ $(".announcement").click(function () {
 	$("#text-modal .info").text($(this).find(".announcement-info").text());
 	$("#text-modal .info-cont").show();
 	$("#text-modal").modal("show");
+	$("#text-modal .text-modal-body").animate({scrollTop: $("#text-modal .text-modal-body").offset().top});
 });
 
 $(".service").click(function () {
@@ -13,6 +14,7 @@ $(".service").click(function () {
 	$("#text-modal p").html($(this).find(".service-text").html());
 	$("#text-modal .info-cont").hide();
 	$("#text-modal").modal("show");
+	$("#text-modal .text-modal-body").animate({scrollTop: $("#text-modal .text-modal-body").offset().top});
 });
 
 $(".course-card").on("click", ".delete-button", function () {
@@ -85,19 +87,29 @@ $(".course-card").on("change", "input[type='file']", function () {
 });
 
 $(".widget-btn").click(function(){
-	if ($(".widget").hasClass("collapsed")){
-		$(".widget").removeClass("collapsed");
-		$(".widget").addClass("expanded");
-		$(".widget-body-content").show();
+	if(document.documentElement.clientWidth >= 768){
+		if ($(".widget").hasClass("collapsed")){
+			$(".widget").removeClass("collapsed");
+			$(".widget").addClass("expanded");
+			$(".widget-body-content").show();
+		}
+		else{
+			$(".widget").addClass("collapsed");
+			$(".widget").removeClass("expanded");
+			$(".widget-body-content").hide();
+		}
 	}
 	else{
-		$(".widget").addClass("collapsed");
-		$(".widget").removeClass("expanded");
-		$(".widget-body-content").hide();
+		$(".widget-body-content").show();
+		$("#text-modal .modal-title").text("");
+		$("#text-modal p").html($(".widget-body").html());
+		$("#text-modal .info-cont").hide();
+		$("#text-modal").modal("show");
+		$("#text-modal .text-modal-body").animate({scrollTop: $("#text-modal .text-modal-body").offset().top});
 	}
 });
 
-$(".widget").on("click", ".go-dark", function(){
+$(".widget-body-content, #text-modal").on("click", ".go-dark", function(){
 	$("html").css("--stud-gray", "#1f1f1f");
 	$("html").css("--stud-letter", "#666");
 	$("html").css("--stud-red", "#a21025");
@@ -108,7 +120,7 @@ $(".widget").on("click", ".go-dark", function(){
 	$(this).addClass("go-light");
 });
 
-$(".widget").on("click", ".go-light", function(){
+$(".widget-body-content, #text-modal").on("click", ".go-light", function(){
 	$("html").css("--stud-gray", "#ccc");
 	$("html").css("--stud-letter", "#1f1f1f");
 	$("html").css("--stud-red");
@@ -117,4 +129,12 @@ $(".widget").on("click", ".go-light", function(){
 	$("html").css("--ann-txt", "#fff");
 	$(this).removeClass("go-light");
 	$(this).addClass("go-dark");
+});
+
+$("window").resize(function(){
+	if ($(".widget").hasClass("expanded") && (document.documentElement.clientWidth < 768)){
+		$(".widget").addClass("collapsed");
+		$(".widget").removeClass("expanded");
+		$(".widget-body-content").hide();
+	}
 });
