@@ -1,5 +1,23 @@
 var editflag = false;
 
+$(document).ready(function() {
+	let date = new Date();
+	let month = date.getMonth();
+	let day = date.getDate();
+    if(month == 11 && day > 23){
+		$(".carousel-caption h1").text("Η ομάδα του CSLab σας εύχεται Καλά Χριστούγεννα!");
+		$("#main-page").append("<img src='../static/images/frost.png' alt='frost' class='overlay frost-overlay'/>");
+		$("#main-page").append("<img src='../static/images/snow.gif' alt='snow' class='overlay snow-overlay'/>");
+		//$("body").css("background-image", "url('../static/images/frost.png')");
+	}
+	else if(month == 0 && day < 8){
+		$(".carousel-caption h1").text("Η ομάδα του CSLab σας εύχεται Καλή Χρονιά!");
+	}
+	else{
+		$(".carousel-caption h1").text("Καλώς ορίσατε στο CSLab!");
+	}
+});
+
 $(".announcement").click(function () {
 	$("#text-modal .modal-title").text($(this).find(".announcement-title").text());
 	$("#text-modal p").html($(this).find(".announcement-body").html());
@@ -131,10 +149,22 @@ $(".widget-body-content, #text-modal").on("click", ".go-light", function(){
 	$(this).addClass("go-dark");
 });
 
-$("window").resize(function(){
+$(window).resize(function(){
 	if ($(".widget").hasClass("expanded") && (document.documentElement.clientWidth < 768)){
 		$(".widget").addClass("collapsed");
 		$(".widget").removeClass("expanded");
 		$(".widget-body-content").hide();
 	}
+});
+
+$(".widget-body-content, #text-modal").on("click", ".overlay-off", function(){
+	$(".overlay").hide();
+	$(this).removeClass("overlay-off");
+	$(this).addClass("overlay-on");
+});
+
+$(".widget-body-content, #text-modal").on("click", ".overlay-on", function(){
+	$(".overlay").show();
+	$(this).removeClass("overlay-on");
+	$(this).addClass("overlay-off");
 });
