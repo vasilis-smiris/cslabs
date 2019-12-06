@@ -10500,7 +10500,7 @@ footer a:hover .cpath{
 
 /*styling for text modal*/
 #text-modal{
-  color:#666;
+  color:#1f1f1f;
 }
 
 .text-modal-body {
@@ -10691,10 +10691,12 @@ footer a:hover .cpath{
 
 .course-card-body{
   background-color:var(--stud-gray);
+  transition:background-color .15s;
 }
 
 .course-card-list .list-group-item{
   background-color:var(--stud-gray);
+  transition:background-color .15s;
 }
 
 .course-card-body a, .mobile-course .container a{
@@ -10886,4 +10888,24 @@ main{
 }
 
 /*register end*/
+/*festive*/
+.overlay{
+  width:100vw;
+  height:100vh;
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:1000;
+  opacity:.4;
+  pointer-events:none;
+}
+
+.frost-overlay{
+  opacity:.4;
+}
+
+.snow-overlay{
+  opacity:.7;
+}
+/*end festive*/
 /*mycss finish*/
